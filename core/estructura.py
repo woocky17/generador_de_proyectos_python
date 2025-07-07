@@ -8,7 +8,7 @@ from utils.crear_env import crear_env
 from utils.crear_constantes import crear_constantes
 
 
-def estructura(estructura, ruta_base="./"):
+def estructura(estructura, ruta_base="./", crear_readme=True, crear_gitignore=True):
     vs_code_opened = False
     for ruta in estructura:
         if os.path.isabs(ruta_base):
@@ -29,8 +29,12 @@ def estructura(estructura, ruta_base="./"):
         except OSError as e:
             print(f"Error al crear {ruta_completa}: {e}")
     crear_main_py(ruta_base)
-    crear_readme(ruta_base)
-    crear_gitignore(ruta_base)
+    if crear_readme:
+        crear_readme_fn = globals().get('crear_readme', crear_readme)
+        crear_readme_fn(ruta_base)
+    if crear_gitignore:
+        crear_gitignore_fn = globals().get('crear_gitignore', crear_gitignore)
+        crear_gitignore_fn(ruta_base)
     crear_requirements(ruta_base)
     crear_env(ruta_base)
     crear_constantes(ruta_base)

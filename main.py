@@ -5,8 +5,8 @@ import os
 
 def main():
 
-    estructura_carpetas, ruta_base = inicio()
-    estructura(estructura_carpetas, ruta_base)
+    estructura_carpetas, ruta_base, crear_readme, crear_gitignore = inicio()
+    estructura(estructura_carpetas, ruta_base, crear_readme, crear_gitignore)
     # Cierra la consola automáticamente al finalizar (solo funciona si se ejecuta desde un .bat)
     if os.name == "nt":
         os._exit(0)

@@ -16,6 +16,20 @@ def inicio():
         print("Opción no válida.")
         return inicio()
 
+    # Paso adicional: ¿Crear README.md?
+    print("¿Deseas crear un archivo README.md?")
+    print("1. Sí")
+    print("2. No")
+    opcion_readme = input("Elige una opción (1/2): ").strip()
+    crear_readme = opcion_readme == '1'
+
+    # Paso adicional: ¿Crear .gitignore?
+    print("¿Deseas crear un archivo .gitignore?")
+    print("1. Sí")
+    print("2. No")
+    opcion_gitignore = input("Elige una opción (1/2): ").strip()
+    crear_gitignore = opcion_gitignore == '1'
+
     estructura_carpetas = [
         "src",
         os.path.join("src", "api"),
@@ -27,4 +41,5 @@ def inicio():
         "config",
         "data",
     ]
-    return estructura_carpetas, ruta_base
+    # Devuelve también las opciones elegidas
+    return estructura_carpetas, ruta_base, crear_readme, crear_gitignore
