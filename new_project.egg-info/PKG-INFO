@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: new_project
+Version: 0.1
+Summary: Generador de estructura de proyectos Python
+Author: David Ortet
+Requires-Dist: loguru>=0.7.2
+Requires-Dist: sqlalchemy>=2.0.0
+Requires-Dist: pyodbc>=4.0.39
+Dynamic: author
+Dynamic: requires-dist
+Dynamic: summary
