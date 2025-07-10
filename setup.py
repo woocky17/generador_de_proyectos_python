@@ -11,7 +11,7 @@ setup(
     ],
     entry_points={
         "console_scripts": [
-            "new-project=main:main"
+            "new-project=generador_estructura.main:main"
         ]
     },
     author="David Ortet",

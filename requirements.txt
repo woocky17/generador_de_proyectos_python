@@ -1,0 +1,5 @@
+
+# Requisitos del proyecto
+loguru>=0.7.2
+sqlalchemy>=2.0.0
+pyodbc>=4.0.39
