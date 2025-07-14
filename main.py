@@ -1,6 +1,8 @@
 from core.estructura import estructura
 import os
 
+from core.inicio import inicio
+
 
 def main():
     # Estructura de carpetas por defecto
@@ -15,9 +17,9 @@ def main():
         "config",
         "data",
     ]
-    ruta_base = os.getcwd()
     crear_readme = True
     crear_gitignore = True
+    estructura_carpetas, ruta_base, crear_readme, crear_gitignore = inicio()
     estructura(estructura_carpetas, ruta_base, crear_readme, crear_gitignore)
     print("\n¡Estructura de proyecto creada en la carpeta actual!")
     if os.name == "nt":
