@@ -1,18 +1,28 @@
+from core.estructura import estructura
+import os
 
-from loguru import logger
-import sys
 
 def main():
-    logger.remove()
-    logger.add(sys.stderr, colorize=True, level='INFO',
-               format="<green>{time:YYYY-MM-DD HH:mm:ss}</green> | <level>{level}</level> | <magenta>{module}</magenta> | <cyan>{function}:{line}</cyan> | <level>{message}</level>")
-    logger.add(".log", rotation='30 days', retention=12, colorize=False, level='INFO',
-               format="{time:YYYY-MM-DD HH:mm:ss} | {level} | {module} | {function}:{line} | {message}")
+    # Estructura de carpetas por defecto
+    estructura_carpetas = [
+        "src",
+        os.path.join("src", "api"),
+        os.path.join("src", "database"),
+        os.path.join("src", "core"),
+        os.path.join("src", "utils"),
+        os.path.join("src", "models"),
+        os.path.join("src", "models", "mapper"),
+        "config",
+        "data",
+    ]
+    ruta_base = os.getcwd()
+    crear_readme = True
+    crear_gitignore = True
+    estructura(estructura_carpetas, ruta_base, crear_readme, crear_gitignore)
+    print("\n¡Estructura de proyecto creada en la carpeta actual!")
+    if os.name == "nt":
+        os._exit(0)
 
-    logger.info('Process has started')
 
-    # Aquí puedes añadir el código principal de tu aplicación
-
-    logger.success('Process finished successfully')
 if __name__ == "__main__":
     main()

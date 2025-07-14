@@ -1,6 +1,5 @@
 README.md
 setup.py
-core/__init__.py
 core/estructura.py
 core/inicio.py
 generador_estructura/__init__.py
