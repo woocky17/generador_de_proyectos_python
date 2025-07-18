@@ -8,6 +8,9 @@ def crear_constantes(ruta_base):
         with open(constantes_path, "w", encoding="utf-8") as f:
             f.write(
                 """# Constantes del proyecto
+from dotenv import load_dotenv
+
+load_dotenv(override=True)
 """
             )
         print(f"Archivo constantes.py creado en: {constantes_path}")
