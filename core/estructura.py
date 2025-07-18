@@ -6,6 +6,7 @@ from utils.crear_gitignore import crear_gitignore
 from utils.crear_requirements import crear_requirements
 from utils.crear_env import crear_env
 from utils.crear_constantes import crear_constantes
+from utils.crear_error_utils import crear_error_utils
 
 
 def estructura(estructura, ruta_base="./", crear_readme=True, crear_gitignore=True):
@@ -39,3 +40,4 @@ def estructura(estructura, ruta_base="./", crear_readme=True, crear_gitignore=Tr
     crear_env(ruta_base)
     crear_constantes(ruta_base)
     crear_conection_db(ruta_base)
+    crear_error_utils(ruta_base)
