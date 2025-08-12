@@ -7,8 +7,6 @@ def crear_env(ruta_base):
         with open(env_path, "w", encoding="utf-8") as f:
             f.write(
                 """
-# Archivo de configuración de entorno
-# Añade aquí las variables de entorno necesarias para el proyecto
 """
             )
         print(f"Archivo .env creado en: {env_path}")

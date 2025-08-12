@@ -19,7 +19,6 @@ def main():
 
     logger.info('Process has started')
 
-    # Aquí puedes añadir el código principal de tu aplicación
 
     logger.success('Process finished successfully')
 if __name__ == \"__main__\":

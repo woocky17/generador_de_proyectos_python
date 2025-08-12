@@ -8,7 +8,6 @@ def crear_requirements(ruta_base):
         with open(requirements_path, "w", encoding="utf-8") as f:
             f.write(
                 """
-# Requisitos del proyecto
 loguru>=0.7.2
 sqlalchemy>=2.0.0
 pyodbc>=4.0.39
